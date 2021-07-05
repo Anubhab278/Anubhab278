@@ -1,0 +1,16 @@
+   ORG 2000H
+   LXI H,2050H
+   LXI D,2060H
+   MVI c,0AH
+
+L: MOV A,M
+   STAX D
+   INX H
+   INX D
+
+   DCR c
+   JNZ L
+   HLT
+   
+   ORG 2050H
+DB 78H,32H,45H,54H,23H,45H,45H,23H,45H,32H
